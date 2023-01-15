@@ -9,20 +9,19 @@ body {
     flex-direction: column;
 }
 
-
 .morse-converter {
     gap: 20px;
     textarea {
+    resize: none;
     border-radius: 5px;
     background-color: #DEE7E7;
-    height: 10rem;
-    width: 40rem;
+    height: 25vh;
+    width: 60vw;
     margin: 1rem;
     }
-}
-
-
-.clear-input {
+    &__clear {
     border-radius: 5px;
     width: max-content;
+    border: 2px solid blue;
+    }
 }

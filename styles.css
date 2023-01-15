@@ -13,16 +13,17 @@ body {
   gap: 20px;
 }
 .morse-converter textarea {
+  resize: none;
   border-radius: 5px;
   background-color: #DEE7E7;
-  height: 10rem;
-  width: 40rem;
+  height: 25vh;
+  width: 60vw;
   margin: 1rem;
 }
-
-.clear-input {
+.morse-converter__clear {
   border-radius: 5px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  border: 2px solid blue;
 }/*# sourceMappingURL=styles.css.map */

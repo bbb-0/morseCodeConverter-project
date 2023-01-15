@@ -11,17 +11,17 @@
 <body>
     <h2>Morse code converter</h2>
     <div class="morse-converter">
-        <div class="english-input">
+        <div class="morse-converter__input">
             <h3>Input</h3>
-            <textarea id="input" placeholder="Type what you want to convert here: "></textarea>
+            <textarea id="input" wrap="hard" placeholder="Type what you want to convert here: &#10Use normal text seperating words with spaces and morse code using '.' and '-'"></textarea>
         </div>
 
-        <div class="mourse-output">
+        <div class="morse-converter__output">
             <h3>Output</h3>
-            <textarea id="output"></textarea>
+            <textarea id="output" readonly></textarea>
         </div>
 
-        <button id="clear" class="clear-input">Clear</button>
+        <button id="clear" class="morse-converter__clear">Clear</button>
     </div>
 </body>
 </html>
