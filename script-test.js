@@ -1,1 +1,1 @@
-import { convert } from './script.js';
+import * as challenge from './script.js';

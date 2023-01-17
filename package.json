@@ -1,5 +1,26 @@
 {
-	"devDependencies": {
-		"jest": "^29.3.1"
-	}
+    "name": "morsecodeconverter-project",
+    "description": "## Outline",
+    "version": "1.0.0",
+    "main": "dictionary.js",
+    "devDependencies": {
+        "jest": "^29.3.1",
+        "@types/jest": "^26.0.20",
+        "@babel/core": "^7.12.10",
+        "@babel/preset-env": "^7.12.11",
+        "babel-jest": "^26.6.3"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bbb-0/morseCodeConverter-project.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/bbb-0/morseCodeConverter-project/issues"
+    },
+    "homepage": "https://github.com/bbb-0/morseCodeConverter-project#readme"
 }
