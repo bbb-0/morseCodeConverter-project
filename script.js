@@ -1,4 +1,4 @@
-export function convert(input, type) {
+function convert(input, type) {
 	const morseCode = {
 		a: '.-',
 		b: '-...',
@@ -26,7 +26,7 @@ export function convert(input, type) {
 		x: '-..-',
 		y: '-.--',
 		z: '--..',
-		' ': '/',
+		' ': ' ',
 	};
 
 	if (type === 'encode') {
@@ -42,17 +42,16 @@ export function convert(input, type) {
 		// Convert morse code to letters
 		let output = '';
 		input.split(' ').forEach((code) => {
-			let decodedChar = '';
-			for (let letter in morseCode) {
-				if (morseCode[letter] === code) {
-					decodedChar = letter;
+			let letter = '';
+			for (let key in morseCode) {
+				if (morseCode[key] === code) {
+					letter = key;
+					break;
 				}
 			}
-			if (decodedChar !== '') {
-				output += decodedChar;
-			} else {
-				output += '?';
-			}
+			if (letter !== '') output += letter;
+			else if (code === '') output += ' ';
+			else output += code;
 		});
 		return output;
 	}
