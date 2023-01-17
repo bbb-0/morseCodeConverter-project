@@ -1,4 +1,4 @@
-export const dictionary = {
+const dictionary = {
 	A: '.-',
 	B: '-...',
 	C: '-.-.',
