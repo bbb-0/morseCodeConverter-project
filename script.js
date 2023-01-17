@@ -52,7 +52,6 @@ const morseToEnglish = (stringToTranslate, dictionaryObj) => {
 		obj[dictionaryObj[key]] = key;
 		return obj;
 	}, {});
-
 	return stringToTranslate
 		.split(' ')
 		.map((code) => {
