@@ -37,6 +37,13 @@ const dictionary = {
 	' ': '/',
 };
 
+const reverseDictionary = (dictionaryObj) => {
+	return Object.keys(dictionaryObj).reduce((acc, key) => {
+		acc[dictionaryObj[key]] = key;
+		return acc;
+	}, {});
+};
+
 const englishToMorse = (stringToTranslate, dictionaryObj) => {
 	return stringToTranslate
 		.toUpperCase()
@@ -48,14 +55,11 @@ const englishToMorse = (stringToTranslate, dictionaryObj) => {
 };
 
 const morseToEnglish = (stringToTranslate, dictionaryObj) => {
-	const invertedDictionary = Object.keys(dictionaryObj).reduce((obj, key) => {
-		obj[dictionaryObj[key]] = key;
-		return obj;
-	}, {});
+	const reversedDictionary = reverseDictionary(dictionaryObj);
 	return stringToTranslate
 		.split(' ')
-		.map((code) => {
-			return invertedDictionary[code];
+		.map((char) => {
+			return reversedDictionary[char];
 		})
 		.join('');
 };
