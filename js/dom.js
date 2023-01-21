@@ -1,10 +1,18 @@
+import { dictionary } from './dictionary.js';
+import {
+	englishToMorse,
+	morseToEnglish,
+	reverseObject,
+} from './translationUtils.js';
+
 document.getElementById('input').addEventListener('input', (event) => {
 	const inputText = event.target.value;
-	if (inputText.match(/[A-Z]/i)) {
+	// Regex is going to limit the translation possibilities unless you add all possible extra chars to it
+	if (inputText.match(/[A-Z0-9]/i)) {
 		const morseCode = englishToMorse(inputText, dictionary);
 		document.getElementById('output').value = morseCode;
 	} else {
-		const englishText = morseToEnglish(inputText, dictionary);
+		const englishText = morseToEnglish(inputText, reverseObject(dictionary));
 		document.getElementById('output').value = englishText;
 	}
 });

@@ -1,8 +1,6 @@
 import test from 'node:test';
-import { dictionary } from './dictionary.js';
-import { englishToMorse } from './englishToMorse.js';
-import { morseToEnglish } from './morseToEnglish.js';
-import {} from './script.js';
+import { dictionary } from './js/dictionary.js';
+import { englishToMorse, morseToEnglish } from './js/morseUtils.js';
 
 describe('Morse code conversion functions', () => {
 	test('englishToMorse should convert English text to morse code', () => {
